@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!-- Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="java/script.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <!--<script src="java/jquery.flipster.min.js"></script>-->
+    
+    <!-- css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="java/demo.css">
+    <link rel="stylesheet" href="java/jquery.flipster.min.css">
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="css/custom.css" rel="stylesheet">
+    
+</head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                	<span class="glyphicon glyphicon-fire"></span> 
+                    <a href="index.html">MC²</a>
+                    
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">Panorama Plugin</a>
+                    </li>
+                    <li>
+                        <a href="#">Weather Plugin</a>
+                    </li>
+                    <li>
+                        <a href="highcharts.html">CoverFlow Plugin</a>
+                    </li>
+					
+                </ul>
+
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+        <div id="backdrop">
+        <div id="coverflow">
+        <ul class="flip-items">
+            
+            <li data-flip-title="Red">
+                <div id="well1" style="display: none; padding-top:10px; text-align:center; color:white">
+                   <button type="button"class="glyphicon glyphicon-arrow-left" id="button"style="margin-right: 2px;position:absolute;top:0;right:0;"></button>
+                    <h1>Songs</h1>
+                    <p class="glyphicon glyphicon-play" id="galway">Galway Girl</p>
+                    <p class="glyphicon glyphicon-play" id="castle">Castle on the Hill</p>
+                     <p class="glyphicon glyphicon-play" id="shape">Shape Of You</p>
+                    </div>
+                <img id="album1" src="java/images/sheeran.png">
+                
+            </li>
+            
+            <li data-flip-title="Razzmatazz" data-flip-category="Purples">
+                   <div id="well2" style="display: none; padding-top:10px; text-align:center; color:white">
+                   <button type="button"class="glyphicon glyphicon-arrow-left" id="button2"style="margin-right: 2px;position:absolute;top:0;right:0;"></button>
+                    <h1>Songs</h1>
+                    <p class="glyphicon glyphicon-play" id="lose">Lose Yourself</p>
+                    <p class="glyphicon glyphicon-play" id="justLoseIt">Just Lose It</p>
+                    <p class="glyphicon glyphicon-play" id="mockingbird">Mockingbird</p>
+                    
+                    </div>
+                <img id="album2" src="java/images/encore.jpg">
+                
+                
+             </li>
+            <li data-flip-title="Deep Lilac" data-flip-category="Purples">
+                  <div id="well3" style="display: none; padding-top:10px; text-align:center; color:white">
+                   <button type="button"class="glyphicon glyphicon-arrow-left" id="button3"style="margin-right: 2px;position:absolute;top:0;right:0;"></button>
+                    <h1>Songs</h1>
+                    <p class="glyphicon glyphicon-play" id="idiot">American Idiot</p>
+                      <p class="glyphicon glyphicon-play" id="holiday">Holiday</p>
+                      <p class="glyphicon glyphicon-play" id="dreams">Boulevard of broken dreams</p>
+                   
+                    </div>
+                <img id="album3" src="java/images/greenDay.jpg">
+            </li>
+            
+            
+            <li data-flip-title="Daisy Bush" data-flip-category="Purples">
+                <div id="well4" style="display: none; padding-top:10px; text-align:center; color:white">
+                   <button type="button"class="glyphicon glyphicon-arrow-left" id="button4"style="margin-right: 2px;position:absolute;top:0;right:0;"></button>
+                    <h1>Songs</h1>
+                    <p class="glyphicon glyphicon-play" id="staunch">Be Staunch</p>
+                    <p class="glyphicon glyphicon-play" id="snappin">Snappin</p>
+                    <p class="glyphicon glyphicon-play" id="fullFat">Full Fat</p>
+                   
+                    </div>
+                <img id="album4" src="java/images/thisSideUp.jpg">
+        </ul>
+    </div>
+        </div>
+        <button id="btn">create chart</button>
+<div id="container">
+        </div>
+<script>
+    var coverflow = $("#coverflow").flipster();
+</script>        
+</body>
+</html>
+
