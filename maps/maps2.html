@@ -77,7 +77,7 @@
   // Make the weather request
   var getWeather = function(northLat, eastLng, southLat, westLng) {
     gettingData = true;
-    var requestString = "http://api.openweathermap.org/data/2.5/box/city?bbox=12,32,15,37,10&appid=b1b15e88fa797225412429c1c50c122a1"
+    var requestString = "http://api.openweathermap.org/data/2.5/box/city?bbox="
                         + westLng + "," + northLat + "," //left top
                         + eastLng + "," + southLat + "," //right bottom
                         + map.getZoom()
@@ -92,7 +92,7 @@
   var proccessResults = function() {
     console.log(this);
     var results = JSON.parse(this.responseText);
-    if (results.list.length > 0) {
+    if (results.length > 0) {
         resetData();
         for (var i = 0; i < results.list.length; i++) {
           geoJSON.features.push(jsonToGeoJson(results.list[i]));
